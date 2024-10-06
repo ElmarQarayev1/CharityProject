@@ -8,8 +8,13 @@
 
   <ItemGroup>
     <None Remove="Entities\" />
+    <None Remove="Entities\Enums\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Entities\" />
+    <Folder Include="Entities\Enums\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="7.0.16" />
   </ItemGroup>
 </Project>
