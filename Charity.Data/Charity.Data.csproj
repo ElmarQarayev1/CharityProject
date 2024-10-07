@@ -9,10 +9,14 @@
   <ItemGroup>
     <None Remove="Repositories\" />
     <None Remove="Configuration\" />
+    <None Remove="Repositories\Interfaces\" />
+    <None Remove="Repositories\Implimentations\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Repositories\" />
     <Folder Include="Configuration\" />
+    <Folder Include="Repositories\Interfaces\" />
+    <Folder Include="Repositories\Implimentations\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Charity.Core\Charity.Core.csproj" />
