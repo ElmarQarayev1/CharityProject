@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Charity.Data;
 using Charity.Data.Repositories.Impimentations;
+using Charity.Data.Repositories.Implimentations;
 using Charity.Data.Repositories.Interfaces;
 using Charity.Middlewares;
 using Charity.Service.Dtos.Category;
@@ -40,6 +41,8 @@ builder.Services.AddEndpointsApiExplorer();
 
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
+builder.Services.AddScoped<ITagRepository, TagRepository>();
+builder.Services.AddScoped<ITagService, TagService>();
 
 builder.Services.AddSwaggerGen();
 
