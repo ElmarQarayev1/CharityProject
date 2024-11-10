@@ -38,7 +38,7 @@ namespace Charity.Service.Implementations
             return entity.Id;
         }
 
-
+        //deletee ucun 
         public void Delete(int Id)
         {
             Tag tag = _tagRepository.Get(x => x.Id == Id);
