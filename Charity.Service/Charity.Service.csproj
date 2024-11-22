@@ -18,6 +18,7 @@
     <None Remove="Exceptions\" />
     <None Remove="Helpers\" />
     <None Remove="Dtos\Tag\" />
+    <None Remove="Dtos\Event\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Dtos\" />
@@ -28,6 +29,7 @@
     <Folder Include="Exceptions\" />
     <Folder Include="Helpers\" />
     <Folder Include="Dtos\Tag\" />
+    <Folder Include="Dtos\Event\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="13.0.1" />

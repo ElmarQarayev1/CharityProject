@@ -44,9 +44,11 @@ builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<ITagRepository, TagRepository>();
 builder.Services.AddScoped<ITagService, TagService>();
 
+builder.Services.AddScoped<IEventRepository, EventRepository>();
+builder.Services.AddScoped<IEventService, EventService>();
+
+
 builder.Services.AddSwaggerGen();
-
-
 
 
 builder.Services.AddDbContext<AppDbContext>(option =>
@@ -82,6 +84,8 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.UseStaticFiles();
 
 app.UseMiddleware<ExceptionHandlerMiddleware>();
 

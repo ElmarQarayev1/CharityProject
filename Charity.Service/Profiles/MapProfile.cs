@@ -2,6 +2,7 @@
 using AutoMapper;
 using Charity.Core.Entities;
 using Charity.Service.Dtos.Category;
+using Charity.Service.Dtos.Event;
 using Charity.Service.Dtos.Tag;
 using Microsoft.AspNetCore.Http;
 
@@ -36,6 +37,15 @@ namespace Charity.Service.Profiles
 
             CreateMap<Tag, TagPaginatedGetDto>()
                 .ForMember(dest => dest.NewsTagCount, s => s.MapFrom(s => s.NewsTags.Count));
+
+
+            //Events
+
+            CreateMap<Event, EventGetDto>().
+                  ForMember(dest => dest.ImageUrl, opt => opt.MapFrom(src => baseUrl + "/uploads/events/" + src.ImageName));
+            CreateMap<Event, EventPaginatedGetDto>()
+                  .ForMember(dest => dest.ImageUrl, opt => opt.MapFrom(src => baseUrl + "/uploads/events/" + src.ImageName))
+                  .ForMember(dest => dest.CategoryId, opt => opt.MapFrom(src => src.CategoryId));
 
         }
     }
